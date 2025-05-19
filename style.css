@@ -1,0 +1,433 @@
+/* Bas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff8f0;
+  color: #333;
+  overflow-x: hidden;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Sidhuvud */
+header {
+  background-color: #fcd5ce;
+  padding: 20px;
+  border-bottom: 3px solid #f4a261;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.header-info {
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #e76f51;
+  width: 0;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e76f51;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Innehåll */
+.container {
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Knapp */
+button {
+  background-color: #f4a261;
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e76f51;
+  transform: scale(1.05);
+}
+
+/* Sidfot */
+footer {
+  background-color: #fcd5ce;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 3px solid #f4a261;
+  margin-top: 80px;
+  animation: fadeIn 1s ease-in;
+}
+
+.footer-content p,
+.footer-content a {
+  color: #444;
+  font-size: 14px;
+}
+
+.footer-links nav h4 {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #e76f51;
+}
+
+/* Flygande emoji */
+.emoji-fly {
+  position: fixed;
+  font-size: 2.5rem;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  z-index: 9999;
+}
+
+/* Responsivitet */
+@media (max-width: 600px) {
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    margin: 40px 15px;
+    padding: 20px;
+  }
+}
+.lead-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.celebration-box {
+  background-color: #ffe5ec;
+  padding: 20px;
+  border-left: 5px solid #f4a261;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.02); }
+}
+
+.tips-card {
+  background-color: #fff3e0;
+  border: 2px dashed #f4a261;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.tips-card ul {
+  margin-left: 20px;
+}
+
+.tips-card li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.loading-bar {
+  width: 0;
+  height: 5px;
+  background-color: #f4a261;
+  animation: loadbar 5s linear forwards;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+@keyframes loadbar {
+  to {
+    width: 100%;
+  }
+}
+
+.info-text {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.lead-text {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Bas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff8f0;
+  color: #333;
+  overflow-x: hidden;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Sidhuvud */
+header {
+  background-color: #fcd5ce;
+  padding: 20px;
+  border-bottom: 3px solid #f4a261;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.header-info {
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #e76f51;
+  width: 0;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e76f51;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Innehåll */
+.container {
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+  font-size: 2rem;
+  color: #e76f51;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input[type="file"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #f4a261;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #e76f51;
+}
+
+button {
+  background-color: #f4a261;
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e76f51;
+  transform: scale(1.05);
+}
+
+.info-text {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Sidfot */
+footer {
+  background-color: #fcd5ce;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 3px solid #f4a261;
+  margin-top: 80px;
+  animation: fadeIn 1s ease-in;
+}
+
+.footer-content p,
+.footer-content a {
+  color: #444;
+  font-size: 14px;
+}
+
+.footer-links nav h4 {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #e76f51;
+}
+
+/* Responsivitet */
+@media (max-width: 600px) {
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    margin: 40px 15px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}
